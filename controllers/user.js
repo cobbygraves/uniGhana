@@ -5,7 +5,7 @@ const uuid = require('uuid')
 const jwt = require('jsonwebtoken')
 
 //function to check if email exist
-const checkEmail = async (email) => {
+const checkEmail = async (email, next) => {
   let existingEmail
   try {
     existingEmail = await UserModel.findOne({
@@ -21,7 +21,7 @@ const checkEmail = async (email) => {
 const getUser = async (req, res, next) => {
   const user = req.body
 
-  let existingUser = await checkEmail(user.email)
+  let existingUser = await checkEmail(user.email, next)
   if (existingUser) {
     bcrypt
       .compare(user.password, existingUser.password)
@@ -57,7 +57,7 @@ const getUser = async (req, res, next) => {
 const createUser = async (req, res, next) => {
   const { email, password, passwordRepeat } = req.body
 
-  const emailExist = await checkEmail(email)
+  const emailExist = await checkEmail(email, next)
   if (emailExist) {
     return res.json({
       message: 'email already exist',
