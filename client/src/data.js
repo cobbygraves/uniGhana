@@ -1,0 +1,5 @@
+export const conclusions = [
+  "Yor are an Extrovert. You are interested in engaging with the environment, and you feed off the responses of people and events around them. You enjoy pushing limits and seeing what the world can do. This all depends on many other factors and lifes natural limitations, but you lean towards taking initiative and rely on the world around you for validation",
+  "You are an Introvert. You have a tendency to be reserved, which helps you to pace yourself. You arre likely to listen to others more carefully. You are very introspective. You enjoy been focused alone – leading to more and deeper insights. Sometimes you are too sensitive to the environments, this often helps you pick up clues more quickly, making you great at reading many situations.",
+  "You are more of an Introvert but a little of Extrovert characteristics can be found in you.You arre likely to listen to others more carefully. You are sometimes too sensitive to the environments. Your limits are tested with the world around you and probably you can be reserved at critical situations",
+];
